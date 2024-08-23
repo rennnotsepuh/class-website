@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.organization-tree {
+  width: 90%;
+  height: auto;
+  text-align: center;
+}
+
+.organization-tree .kolom {
+  padding-top: 20px;
+  position: relative;
+  transition: .5s;
+}
+
+.organization-tree .struktur {
+  display: inline-table;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 10px;
+  transition: .5s;
+}
+
+.organization-tree .struktur::before,
+.organization-tree .struktur::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 53%;
+  height: 10px;
+}
+
+.kolom>.struktur:nth-child(5)::before {
+  top: -32px;
+  height: 42px;
+}
+
+.organization-tree .struktur::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.organization-tree .struktur:only-child::after,
+.organization-tree .struktur:only-child::before {
+  display: none;
+}
+
+.organization-tree .struktur:only-child {
+  padding-top: 0;
+}
+
+.organization-tree .struktur:first-child::before,
+.organization-tree .struktur:last-child::after {
+  border: 0 none;
+}
+
+.organization-tree .struktur:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+
+.organization-tree .struktur:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+.organization-tree .kolom .kolom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.organization-tree .struktur a {
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: inline-grid;
+  border-radius: 5px;
+  text-decoration-line: none;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+.organization-tree .struktur a img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px !important;
+  border-radius: 100px;
+  margin: auto;
+}
+
+.organization-tree .struktur a span {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #666;
+  padding: 8px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/*Hover-Section*/
+.organization-tree .struktur a:hover,
+.organization-tree .struktur a:hover i,
+.organization-tree .struktur a:hover span,
+.organization-tree .struktur a:hover+.kolom .struktur a {
+  background: #c8e4f8;
+  color: #000;
+  border: 1px solid #94a0b4;
+}
+
+.organization-tree .struktur a:hover+.kolom .struktur::after,
+.organization-tree .struktur a:hover+.kolom .struktur::before,
+.organization-tree .struktur a:hover+.kolom::before,
+.organization-tree .struktur a:hover+.kolom .kolom::before {
+  border-color: #94a0b4;
+}
+
+
+
+
+.resp {
+  display: block;
+}
+
+
+@media (max-width: 576px) {
+  .organization-tree .struktur a {
+    padding: 5px;
+  }
+
+  .organization-tree .struktur a span {
+    padding: 3px;
+    font-size: 7px;
+    letter-spacing: .2px;
+    font-weight: 500;
+  }
+
+  .organization-tree .struktur a img {
+    height: 30px;
+    width: 30px;
+  }
+
+
+
+  .kolom>.struktur:nth-child(5)::before {
+    top: -20px;
+    height: 30px;
+  }
+
+  #name1,
+  #name2,
+  #name3,
+  #name4,
+  h4 {
+    font-size: 6px;
+  }
+
+ .struktur >h6 {
+    font-size: 4.5px;
+
+  }
+
+  .resp {
+    display: none;
+  }
+}
