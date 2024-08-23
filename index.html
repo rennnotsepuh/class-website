@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CLASS WEBSITE</title>
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sacramento&display=swap" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="css/dist/css/bootstrap.min.css">
+  <script src="css/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+    text-align: center;
+    color: white;
+
+
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 99.7%;
+    z-index: -1;
+    background: linear-gradient(-45deg, #A86BFF, #5E00E5)
+      /* nanti buat responsif untuk tinggi tertentu*/
+  }
+
+
+  .navbar ul li a {
+    color: #fff;
+    text-align: center;
+  }
+
+  .navbar ul li a:hover {
+    background-color: #6eacda;
+    color: white;
+    transition-delay: 0.1ms;
+    border: none;
+    cursor: pointer;
+    transition: all .5s linear;
+  }
+
+  div:nth-child(2) img {
+    border-radius: 49% 51% 50% 51% / 62% 64% 30% 34%;
+    width: 200px;
+  }
+
+  div:nth-child(3) svg {
+    width: 100vw;
+    height: auto;
+    transform: translate3d(20deg)
+  }
+  
+  
+  
+    section div h1{
+      display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
+  font-style: normal;
+    }
+  section div h1 button {
+    border: 0px;
+    background: transparent;
+    padding: 0 20px;
+  font-family: "Sacramento", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  }
+</style>
+
+<body>
+  <header>
+    <div class="navbar container-fluid d-flex align-items-center justify-content-between">
+      <ul class="d-flex align-items-center justify-content-center">
+        <h4 class="h3 m-3">CLASS</h4>
+      </ul>
+      <ul class="d-flex align-items-center justify-content-center">
+        <li><a class="btn rounded-5 m-1" href="#">HOME</a></li>
+        <li><a class="btn rounded-5 m-1" href="#">ORGANIZATION</a></li>
+        <li><a class="btn rounded-5 m-1" href="#">GALERY</a></li>
+        <li><a class="btn rounded-5 m-1" href="#">CONTACT</a></li>
+      </ul>
+    </div>
+    <div>
+      <img class="pt-1" src="images/1.jpg" alt="">
+      <h4 id="name-teacher" class="mt-3">lorem</h4>
+      <h6 class="mb-3">HOMEROOM TEACHER</h6>
+      <div class="m-3 bg">
+        <h1>YOUR CLASS</h1>
+      </div>
+    </div>
+
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1" d="M0,128L80,149.3C160,171,320,213,480,208C640,203,800,149,960,128C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+      </svg>
+    </div>
+  </header>
+
+  <section>
+    <div>
+      <h1>
+        <button id="organizer">Organizer</button>
+        &
+      <button id="schedule">Schedule</button>
+      </h1>
+    </div>
+  <div class="organization">
+    <div class="organization-row">
+      <div class="organization-tree">
+        <ul class="kolom">
+          <li class="struktur"> <a href="#"><img src="images/1.jpg"><span>
+                <h4 id="teacher-name"></h4>
+                <h6>WALI KELAS</h6>
+              </span></a>
+
+            <ul class="kolom">
+              <li class="struktur"><a href="#"><img src="images/2.jpg"><span>
+                    <h4 id="ketuakls-name">namaketuakelas</h4>
+                    <h6 class="mini">KETUA KELAS</h6>
+                  </span></a>
+                <ul class="kolom">
+                  <li class="struktur"> <a href="#"><img src="images/1.jpg"><span>
+                        <h4 id="bendahara-name">namabendahara</h4>
+                        <h6>BENDAHARA</h6>
+                      </span></a></li>
+                  <li class="struktur"> <a href="#"><img src="images/1.jpg"><span>
+                        <h4 id="sekretaris-name">namasekretaris</h4>
+                        <h6>SEKRETARIS</h6>
+                      </span></a></li>
+                </ul>
+              </li>
+              <li class="struktur"> <a href="#"><img src="images/1.jpg"><span>
+                    <h4 id="wakilketuakelas-name">wakilketuakelas</h4>
+                    <h6>WAKIL KETUA</h6>
+                  </span></a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <ul class="kolom">
+          <li class="struktur"> <a href="#"><span>
+                <h2>ANGGOTA KELAS</h2>
+              </span></a>
+            <ul class="kolom">
+              <li class="struktur"> <a href="#"><img src="images/3.jpg"><span>
+                    <h4 id="name1"></h4>
+                  </span></a></li>
+              <li class="struktur"> <a href="#"><img src="images/4.jpg"><span>
+                    <h4 id="name2"></h4>
+                  </span></a></li>
+              <li class="struktur"> <a href="#"><img src="images/5.jpg"><span>
+                    <h4 id="name3"></h4>
+                  </span></a></li>
+              <li class="struktur resp"> <a href="#"><img src="images/6.jpg"><span>
+                    <h4 id="name4"></h4>
+                  </span></a></li>
+              <li class="v-all struktur"> <a href="#"><span>View all</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  </section>
+
+
+
+
+  <script src="setting.js"></script>
+  <script>
+    const elements = [
+      { id: 'name-bendahara', name: data.namabendahara || 'namabendahara' },
+      { id: 'name-sekretaris', name: data.namasekretaris || 'namasekretaris' },
+      { id: 'name-teacher', name: data.namaguru || 'nama guru' },
+      { id: 'name-student1', name: data.nama1 || 'nama1' },
+      { id: 'name-student2', name: data.nama2 || 'nama2' },
+      { id: 'name-student3', name: data.nama3 || 'nama3' },
+      { id: 'name-student4', name: data.nama4 || 'nama4' },
+      { id: 'name-student5', name: data.nama5 || 'nama5' },
+      { id: 'name-student6', name: data.nama6 || 'nama6' },
+      { id: 'name-student7', name: data.nama7 || 'nama7' }
+      //ubah id di html terlebih dahulu 
+      // lalu lanjutkan javascript sampai nama25 tanpa merubah tag html
+    ];
+
+    elements.forEach(({ id, name }) => {
+      const element = document.getElementById(id);
+      element.innerText = name;
+
+      if (name.length > 8) {
+        element.style.textOverflow = 'ellipsis';
+        element.style.overflow = 'hidden';
+        element.style.whiteSpace = 'nowrap';
+        element.style.margin = "auto"
+        if (window.matchMedia("(max-width: 576px)").matches) {
+          element.style.width = "30px"
+        } else {
+          element.style.width = "auto"
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
